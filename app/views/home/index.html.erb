@@ -1,1 +1,21 @@
-<h1>Bem vindo a rede social Friends!</h1>
+<h1 align="center">Bem vindo ao Friends!</h1>
+    <style>
+
+    	.box {
+    		border: 1px solid;
+    		font-size: 20px;
+    		background: ghostwhite;
+    		margin: 10px;
+    		padding: 5px;
+
+    	}
+
+    </style>
+		
+	<% todos = Publication.all%>
+	<% todos.each do |publicacao| %>
+	<div class="box">
+    	<p><%= publicacao.legenda %></p>
+    </div>
+    <br>
+	<%end%>
