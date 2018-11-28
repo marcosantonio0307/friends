@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2018_11_20_004003) do
 
   create_table "publications", force: :cascade do |t|
     t.text "legenda"
+    t.integer "like"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
