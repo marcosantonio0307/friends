@@ -13,13 +13,19 @@
     	}
 
     </style>
+
+    <p>
+        <h4 align="right"><%= link_to "Nova Publicação", "new" %></h4>
+    </p>
 		
 	<% todos = Publication.all%>
 	<% todos.each do |publicacao| %>
 	<div class="box">
     	<p><%= publicacao.legenda %></p>
         <p align="right"> Likes: <%= publicacao.like %>
-        <%= link_to 'curtir', "curtir/#{publicacao.id}" %></p>
+        <%= link_to 'curtir', "curtir/#{publicacao.id}" %>
+        <%= link_to 'apagar', "apagar/#{publicacao.id}" %>
+        </p>
     </div>
     <br>
 	<%end%>
