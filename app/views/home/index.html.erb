@@ -1,4 +1,6 @@
 <h1 align="center">Bem vindo ao Friends!</h1>
+
+<h2 align="center">A maior rede social do mundo!</h2>
     <style>
 
     	.box {
@@ -16,7 +18,10 @@
 	<% todos.each do |publicacao| %>
 	<div class="box">
     	<p><%= publicacao.legenda %></p>
+        <p align="right"> Likes: <%= publicacao.like %>
+        <%= link_to 'curtir', "curtir/#{publicacao.id}" %></p>
     </div>
     <br>
 	<%end%>
 <h1>Bem vindo a maior rede social do mundo!</h1>
+
