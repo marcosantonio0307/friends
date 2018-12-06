@@ -19,12 +19,13 @@
     </p>
 		
 	<% todos = Publication.all%>
+    <% todos = todos.reverse %>
 	<% todos.each do |publicacao| %>
 	<div class="box">
     	<p><%= publicacao.legenda %></p>
         <p align="right"> Likes: <%= publicacao.like %>
-        <%= link_to 'curtir', "curtir/#{publicacao.id}" %>
-        <%= link_to 'apagar', "apagar/#{publicacao.id}" %>
+        <%= button_to 'curtir', "curtir/#{publicacao.id}", class:"btn btn-success" %>
+        <%= button_to 'apagar', "apagar/#{publicacao.id}", class:"btn btn-danger", data: {confirm: "Apagar?"} %>
         </p>
     </div>
     <br>
